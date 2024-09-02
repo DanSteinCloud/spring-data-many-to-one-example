@@ -1,6 +1,8 @@
 package com.emura_group.togo_zones.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -14,6 +16,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -59,6 +62,5 @@ public class Commune implements Serializable {
   @OnDelete(action = OnDeleteAction.CASCADE)
   @JsonIgnore
   private Region region;
-
-
+  
 }
